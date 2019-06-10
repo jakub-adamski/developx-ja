@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes();
+
+//FRONTEND WEB ROUTES
+Route::group(['namespace' => 'Frontend'], function () {
+    Route::group(['middleware' => ['auth' /*, 'verified'*/]], function () {
+        Route::get('/', 'HomeController@index')->name('home');
+    });
 });

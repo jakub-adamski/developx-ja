@@ -13,6 +13,25 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['middleware' => 'api'], function() {
+
+    //userController
+    //Route::post('user', 'UserController@create')->name('user.create');
+
+    Route::group(['middleware' => 'auth:api'], function() {
+
+        //userController
+        //Route::get('user', 'UserController@get')->name('user.get');
+        //Route::put('user', 'UserController@update')->name('user.update');
+        //Route::patch('user', 'UserController@updatePartially')->name('user.partially');
+        //Route::delete('user', 'UserController@delete')->name('user.delete');
+
+        //userTransactionController
+        Route::get('user/transaction', 'UserTransactionController@get')->name('user.transaction.get');
+        Route::post('user/transaction', 'UserTransactionController@create')->name('user.transaction.create');
+        Route::put('user/transaction', 'UserTransactionController@update')->name('user.transaction.update');
+        Route::patch('user/transaction', 'UserTransactionController@updatePartially')->name('user.transaction.partially');
+        Route::delete('user/transaction', 'UserTransactionController@delete')->name('user.transaction.delete');
+
+    });
 });

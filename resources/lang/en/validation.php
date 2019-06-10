@@ -147,4 +147,5 @@ return [
 
     'attributes' => [],
 
+    'validate_withdraw_amount' => 'Note unavailable',
 ];

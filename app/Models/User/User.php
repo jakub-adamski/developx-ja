@@ -1,14 +1,15 @@
 <?php
 
-namespace App;
+namespace App\Models\User;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Passport\HasApiTokens;
 
-class User extends Authenticatable
+class   User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
@@ -36,4 +37,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Relation One2Many
+     */
+    public function transactions()
+    {
+        return $this->hasMany('App\Models\User\UserTransaction', 'user_id', 'id');
+    }
 }
