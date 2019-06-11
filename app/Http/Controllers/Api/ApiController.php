@@ -19,6 +19,6 @@ class ApiController extends Controller
      */
     public function __construct()
     {
-        $this->user_api = auth('api')->user() ?  auth('api')->user() : auth('api_token_guard')->user();
+        $this->user_api = auth('api')->user();
     }
 }
