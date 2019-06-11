@@ -48,8 +48,9 @@
 10. Run ``` npm install ```
 11. Run ``` php artisan key:generate ``` to regenerate secure key.
 12. Run ``` php artisan passport:keys ``` to generate the encryption keys Passport needs in order to generate access token.
-13. Run ``` php artisan migrate ``` to create data base tables.
-14. Run ``` php artisan optimize ``` to optimize framework for better performance.
+13. Run ``` php artisan optimize ``` to optimize framework for better performance and cache config.
+14. Run ``` php artisan migrate ``` to create data base tables.
+15. Run ``` npm run prod ``` to compile assets (mix).
 
 ### Features:
 
