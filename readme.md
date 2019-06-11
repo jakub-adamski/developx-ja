@@ -42,7 +42,7 @@
      </VirtualHost>
    ```
    Replace ```C:\Users\Jakub\PhpstormProjects\developx-ja``` with your custom path, start apache and mysql.
-7. Copy ``` .env ``` file
+7. Rename ``` .env-example ``` file to ``` .env ```
 8. Create database and setup connection details in ``` .env ``` file.
 9. Run ``` composer install ```
 10. Run ``` npm install ```
