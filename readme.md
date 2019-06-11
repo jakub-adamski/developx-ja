@@ -1,6 +1,6 @@
 ## DevelopX-JA - installation guide
 
-####Requirements:
+###Requirements:
 
 - PHP >= 7.2.9 (XAMPP)
 - BCMath PHP Extension
@@ -18,7 +18,7 @@
 - composer
 - mysql
 
-####Installation: 
+###Installation: 
 
 1. Install latest node.js
 2. Install latest npm
@@ -51,12 +51,12 @@
 13. Run ``` php artisan migrate ``` to create data base tables.
 14. Run ``` php artisan optimize ``` to optimize framework for better performance.
 
-####Features:
+###Features:
 
 After registration, you will be able to view the Vue component for generating notes.
 There is also a component with the user withdraw history witch is created using Vuex.
 
-####Tests:
+###Tests:
 
 To run tests, type ``` php artisan dusk ```
 
